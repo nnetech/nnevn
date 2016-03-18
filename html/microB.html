@@ -1,0 +1,17 @@
+Bộ thí nghiệm microB (μB) được thiết kế nhằm mục đích cho phép người dùng có thể khảo sát và thực tập nhiều loại vi điều khiển khác nhau. Các module BMCU được thiết kế riêng cho mỗi loại vi điều khiển (MCU).
+
+Hệ thống được phát triển để hỗ trợ vi điều khiển họ 8051, AVR của Atmel, PIC của Microchip, ARM của Philips, cũng như PsoC của Cypress. Các ngoại vi được thiết kế tập trung trên hai board là microB-MAIN và microB-EXT của microB cho phép người sử dụng chỉ tập trung vào việc phát triển phần mềm điều khiển.
+
+Bộ thí nghiệm microB bao gồm:
+
+- Module vi điều khiển BMCU chứa vi điều khiển (MCU) trung tâm, bộ nhớ chương trình ngoài, bộ nhớ dữ liệu ngoài, khối giải mã địa chỉ dùng PLD (với dung lượng tùy theo module).
++ Module BMCU-51 được thiết kế để có thể sử dụng vi điều khiển họ 8051 của Intel, Atmel, Philips, Winbond.
++ Module BMCU-AVR được thiết kế để có thể sử dụng vi điều khiển họ AVR của Atmel.
++ Module BMCU-PIC được thiết kế để có thể sử dụng các loại vi điều khiển PIC của Microchip.
+- Khối thí nghiệm chính microB-MAIN chứa các ngoại vi thông dụng, được chia thành các phần cơ bản sau:
++ Ngõ vào (input): DIP-SW, nút nhấn, khối cảm biến nhiệt, khối chuyển đổi tương tự - số.
++ Ngõ ra (output): led đơn, led thanh, led 7 đoạn giải mã bằng vi mạch, led ma trận, khối chuyển đổi số - tương tự.
++ Các khối hỗ trợ truyền thông: bộ nhớ nối tiếp, RS232, RS485, CAN, USB, Ethernet, thẻ nhớ MMC/SD.
++ Ngoài ra, microB-MAIN còn chứa các kết nối đến module vi điều khiển BMCU, các DIP-SW cho phép cài đặt cấu hình làm việc và các cổng kết nối mở rộng.
+- Khối thí nghiệm mở rộng microB-EXT (lựa chọn) chứa các khối ngoại vi mở rộng bao gồm khối giải mã mở rộng dùng PLD, khối điều khiển động cơ bước (Stepper motor), khối điều khiển động cơ DC với cầu H, khối led 7 đoạn gồm 6 led với giải mã bằng phần mềm, khối led đơn, khối bàn phím 4x4, khối xuất nhập song song mở rộng, khối chuyển đổi song song - nối tiếp, khối đồng bộ góc kích.
+- Phụ kiện của bộ thí nghiệm gồm bộ nguồn DC, 1 cáp RS232, 1 cáp mở rộng kết nối 10 chân, 1 cáp mở rộng kết nối 20 chân, CD chứa chương trình biên dịch, mã nguồn của các bài thí nghiệm, và các ví dụ ứng dụng cụ thể.
